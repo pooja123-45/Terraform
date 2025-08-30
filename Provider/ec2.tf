@@ -1,11 +1,9 @@
-provider "aws"
-{
+provider "aws" {
     region = "us-east-2"
     profile = "mykey"
 }
 
-resource "aws_instance" "firstinstance"
-{
+resource "aws_instance" "firstinstance" {
     ami = "ami-0b016c703b95ecbe4"
     instance_type = "t2.micro"
     key_name = "mykey"
