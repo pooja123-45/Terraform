@@ -8,7 +8,7 @@ resource "aws_instance" "firstinstance" {
     instance_type = "t2.micro"
     key_name = "thisiskey"
     vpc_security_group_ids = ["sg-046ab9b2c3264329a", aws_security_group.securitygroup.id]  #vpass as arguments 
-    tag = {
+    tags = {
         Name = "firstins"
       }
 
