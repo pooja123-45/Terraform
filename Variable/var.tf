@@ -7,7 +7,7 @@ variable "this.instance_type" {
 }
 
 variable "this.sgid" {
-  default = "t2.micro"
+  default = "sg-046ab9b2c3264329a"
 }
 
 
