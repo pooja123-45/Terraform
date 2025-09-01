@@ -12,7 +12,7 @@ resource "aws_instance" "firstinstance" {
         Name = "firstins"
       }
 output "webserver_pubip" {   # name of output block 
-     value = aws_instance.firstinstance_public_ip # pass attribute unique here (public_ip) 
+     value = aws_instance.firstinstance.public_ip # pass attribute unique here (public_ip) 
 }
 
 
