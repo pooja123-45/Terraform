@@ -1,5 +1,5 @@
 provider "aws" {
-      region = "us-west-2"
+      region = "us-east-2"
       profile = "configs"
       shared_credentials_files = ["/home/anup/.aws/credentials"]
     
@@ -11,7 +11,7 @@ terraform {
         bucket = "cbzbatchb27new"
         key = "terraform.tfstate"
         dynamodb_table = "cbz27"
-        region = "us-west-2"
+        region = "us-east-2"
         profile = "configs"
         shared_credentials_files = ["/home/anup/.aws/credentials"]
     }
