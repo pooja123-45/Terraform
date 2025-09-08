@@ -1,6 +1,6 @@
 module  "ec2" {
     source = "/root/Terraform/ModuleBlock/Resources/Ec2"
-      This_api_termination = true
+      This_api_termination = false
         This_key = "thisiskey"
         This_az  = "us-east-2a"
         This_tag =  "webapp"
@@ -20,6 +20,7 @@ module "aws_vpc" {
         this_public_tags = "public"
 
 }
+
 
 
 
