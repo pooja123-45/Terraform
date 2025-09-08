@@ -1,7 +1,7 @@
 provider "aws" {
       region = "us-east-2"
-      profile = "configs"
-      shared_credentials_files = ["/home/anup/.aws/credentials"]
+      profile = "mykey"
+      shared_credentials_files = ["/home/pooja/.aws/credentials"]
     
 }
 
@@ -12,8 +12,8 @@ terraform {
         key = "terraform.tfstate"
         dynamodb_table = "cbz27"
         region = "us-east-2"
-        profile = "configs"
-        shared_credentials_files = ["/home/anup/.aws/credentials"]
+        profile = "mykey"
+        shared_credentials_files = ["/home/pooja/.aws/credentials"]
     }
 }
 
