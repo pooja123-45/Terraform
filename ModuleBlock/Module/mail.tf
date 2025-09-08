@@ -7,8 +7,8 @@ module  "ec2" {
         This_inst = "t2.micro"
         #This_sg  = ["sg-09d5d9601120f72dd"]
         This_ami = "0e2369dd6317d0d7e"
-        this_aws_vpc_id = module.aws_vpc.aws_vpc_id
-        this_aws_instance_subnet = module.aws_vpc.subnet_id
+        this_aws_vpc_id = module.aws_vpc.aws_vpc_id #reference of VPC
+        this_aws_instance_subnet = module.aws_vpc.subnet_id #reference of subnet
 }
 
 module "aws_vpc" {
@@ -20,4 +20,5 @@ module "aws_vpc" {
         this_public_tags = "public"
 
 }
+
 
