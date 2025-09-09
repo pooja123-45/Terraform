@@ -1,15 +1,13 @@
 provider "aws" {
-      region = "us-west-2"
-      profile = "configs"
-      shared_credentials_files = ["/home/anup/.aws/credentials"]
+      region = "us-east-2"
+      profile = "mykey"
     
 }
 
 resource "aws_instance" "this_aws_instancenew" {
-    for_each = toset(var.imageid)
-    ami = each.value
-   // vpc_security_group_ids = ["sg-032e1a4a1685a03be"]
-   // key_name = "delete_oregon_anup"
+    for_each = toset(var.imageid)                      #formet of for_each loop
+    ami = each.value                                    #formet
+
     instance_type = "t2.micro"
     tags = {
         name = "webserver"
@@ -18,9 +16,9 @@ resource "aws_instance" "this_aws_instancenew" {
     
 }
 
-variable "imageid" {
+variable "imageid" {                  #this we passed in for_each loop
     type = list(string)
-    default = ["ami-01102c5e8ab69fb75" , "ami-03aa99ddf5498ceb9"]
+    default = ["ami-0b016c703b95ecbe4" , "ami-0cfde0ea8edd312d4"]
 
 }
 
