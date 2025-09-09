@@ -2,7 +2,7 @@ provider "aws" {
       region = "us-east-2"
       profile = "mykey"
     
-}
+} 
 
 resource "aws_instance" "this_aws_instancenew" {
     for_each = toset(var.imageid)                      #formet of for_each loop
