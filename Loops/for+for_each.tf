@@ -1,8 +1,6 @@
 provider "aws" {
       region = "us-west-2"
-      profile = "configs"
-      shared_credentials_files = ["/home/anup/.aws/credentials"]
-    
+      profile = "mykey"
 }
 
 resource "aws_instance" "this_aws_instancenew" {
