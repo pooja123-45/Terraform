@@ -15,12 +15,12 @@ resource "aws_instance" "this_aws_instance" {
     destination = "/home/ec2-user/aws/"
   }
   provisioner "local-exec" {                                                    #Local-Execution Provision
-    command = "echo ${self.private_ip} >> private_ips.txt"
+    command = "echo ${self.private_ip} >> private_ips.txt"                      #show output on your local
   }
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("${path.module}/tf.pem")
+    private_key = file("${path.module}/tf.pem")                              #location of your private key to build connection between server and local machine
     host        = self.public_ip
   }
 
