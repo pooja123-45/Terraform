@@ -18,16 +18,16 @@ resource "aws_instance" "this_aws_instancenew" {
     
 }
 
-variable "imageid" {
+variable "imageid" {                                  
     type = list(string)
-    default = ["ami-01102c5e8ab69fb75" , "ami-03aa99ddf5498ceb9"]
+    default = ["ami-0b016c703b95ecbe4" , "ami-0cfde0ea8edd312d4"]
 
 }
 
 
-output "aws_ec2" {
+output "aws_ec2" {                          #for loop used here
   value = [
-    for amiid in var.imageid:
-        aws_instance.this_aws_instancenew[amiid].public_ip
+    for myloop in var.imageid:
+        aws_instance.this_aws_instancenew[myloop].public_ip
   ]
 }
