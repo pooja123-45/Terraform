@@ -16,7 +16,7 @@ resource "aws_instance" "this_aws_instancenew" {
     
 }
 
-variable "imageid" {                                  
+variable "imageid" {                                  # for_each used here                          
     type = list(string)
     default = ["ami-0b016c703b95ecbe4" , "ami-0cfde0ea8edd312d4"]
 
